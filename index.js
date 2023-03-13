@@ -65,6 +65,8 @@ phoneInputs.forEach((input, index) => {
                             document.getElementById("phone--send__btn").setAttribute("disabled", "true");
                             phoneCheckBtn.setAttribute("disabled", "true");
                             document.getElementById("phone--check__span").innerText = "3:00";
+
+                            clearInterval(intervalId);
                         }
                     }, 1000);
 
@@ -72,6 +74,18 @@ phoneInputs.forEach((input, index) => {
                     phoneCheckBtn.style.color = "#FFFFFF";
                     phoneCheckBtn.style.backgroundColor = "#0068FF";
                     phoneCheckBtn.style.cursor = "pointer";
+
+                    phoneCheckBtn.addEventListener('click', (event) => {
+                        event.preventDefault();
+
+                        clearInterval(intervalId);
+
+                        event.target.setAttribute("disabled", "true");
+                        alert("인증이 완료되었습니다");
+                        document.getElementById("phone--send__btn").setAttribute("disabled", "true");
+                        document.getElementById("phone--send__span").innerText = "000000";
+                        document.getElementById("phone--check__span").innerText = "3:00";
+                    });
                 })
             }
         });
