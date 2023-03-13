@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>*** 회원가입</h1>
+    </header>
+
+    <main>
+        <form action="#">
+            <input class="input-style-1" type="text" placeholder="이메일을 입력해 주세요.">
+
+            <input class="input-style-1" type="text" placeholder="이름을 입력해 주세요.">
+
+            <input class="input-style-1" type="password" placeholder="비밀번호를 입력해 주세요.">
+
+            <input class="input-style-1" type="password" placeholder="비밀번호를 다시 입력해 주세요.">
+
+            <div class="input-phone">
+                <input id="input-phone__1" class="input-phone__text input-style-2" type="text" maxlength="3">
+                <span>-</span>
+                <input id="input-phone__2" class="input-phone__text input-style-2" type="text" maxlength="4">
+                <span>-</span>
+                <input id="input-phone__3" class="input-phone__text input-style-2" type="text" maxlength="4">
+            </div>
+
+            <div class="input-phone--send">
+                <button id="phone--send__btn" class="phone-btn-style" disabled>인증번호 전송</button>
+                <span>000000</span>
+            </div>
+
+            <div class="input-phone--check">
+                <button class="phone-btn-style" disabled>인증 완료</button>
+                <span>3:00</span>
+            </div>
+
+
+            <select class="input-style-1">
+                <option selected disabled>지역을 선택하세요.</option>
+                <option>서울</option>
+                <option>인천</option>
+                <option>경기</option>
+            </select>
+
+            <div class="gender-box">
+                <div class="gender-box__inner">
+                    <input type="radio" name="gender">
+                    <span>여성</span>
+                </div>
+                <div class="gender-box__inner">
+                    <input type="radio" name="gender">
+                    <span>남성</span>
+                </div>
+            </div>
+
+
+            <button class="submit-btn" disabled>가입하기</button>
+        </form>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
